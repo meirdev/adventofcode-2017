@@ -35,7 +35,7 @@ def parse_input(input: str) -> list[NamedTuple]:
     return moves
 
 
-def solution(input: str, times: int, programs: str):
+def solution(input: str, times: int, programs: str) -> str:
     moves = parse_input(input)
 
     queue = collections.deque(programs)
@@ -65,11 +65,11 @@ def solution(input: str, times: int, programs: str):
     return result
 
 
-def part1(input: str, programs: str = PROGRAMS):
+def part1(input: str, programs: str = PROGRAMS) -> str:
     return solution(input, 1, programs)
 
 
-def part2(input: str, programs: str = PROGRAMS):
+def part2(input: str, programs: str = PROGRAMS) -> str:
     return solution(input, 1_000_000_000, programs)
 
 
